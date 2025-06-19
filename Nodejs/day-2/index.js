@@ -2,12 +2,21 @@ const http = require("http");
 
 
 const server = http.createServer((req , res)=>{
-   console.log("New Req Received.")
+    if(req.url === "/"){
+        res.end("Hello from homepage")
+    }
 
-   res.end("Hello World")
-});
+    else if(req.url === "/about"){
+        res.end("Hello from about page")
+    }
+
+    else{
+        console.log("No url found")
+    }
+    
+})
 
 
-server.listen(8000  , ()=>{
-    console.log("Listening on port 8000")
+server.listen(8000 , ()=>{
+    console.log("Server is running on port 8000")
 })
