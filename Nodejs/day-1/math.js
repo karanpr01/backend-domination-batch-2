@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const pi = 3.14
 const admin = "Prem"
 const platFrom = "CodeSnippet"
@@ -15,3 +16,14 @@ module.exports = {pi,admin,platFrom}
 // *Nodejs warpper
 // (function (exports, require, module, __filename, __dirname) {
 // });
+=======
+(function (exports, require, module, __filename, __dirname) {
+  
+const PI = 3.14;
+const Platfrom = process.platform;
+const ADMIN = "admin";
+
+
+module.exports = {PI , Platfrom , ADMIN}
+});
+>>>>>>> upstream/main
