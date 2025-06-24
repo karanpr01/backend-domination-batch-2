@@ -1,0 +1,37 @@
+{
+  "eventCounts": {
+    "login": 6,
+    "logout": 6,
+    "purchase": 6,
+    "profileUpdate": 6
+  },
+  "summary": [
+    {
+      "timestamp": "2025-06-24T05:04:40.610Z",
+      "summary": {
+        "login": 2,
+        "logout": 2,
+        "purchase": 2,
+        "profileUpdate": 2
+      }
+    },
+    {
+      "timestamp": "2025-06-24T05:07:36.350Z",
+      "summary": {
+        "login": 4,
+        "logout": 4,
+        "purchase": 4,
+        "profileUpdate": 4
+      }
+    },
+    {
+      "timestamp": "2025-06-24T05:07:42.345Z",
+      "summary": {
+        "login": 6,
+        "logout": 6,
+        "purchase": 6,
+        "profileUpdate": 6
+      }
+    }
+  ]
+}
