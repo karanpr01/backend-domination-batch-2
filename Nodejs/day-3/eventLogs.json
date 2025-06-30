@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
   "login": 74,
   "logout": 0,
   "purchase": 0,
   "profileUpdate": 0
+=======
+  "login": 74
+>>>>>>> upstream/main
 }
