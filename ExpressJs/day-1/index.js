@@ -21,9 +21,16 @@ const data = [
     email: "Akash@example.com",
   },
 ];
+<<<<<<< HEAD
 
 // GET Method
 
+=======
+// method
+// endpoint
+// data
+// req , res
+>>>>>>> upstream/main
 app.get("/get-users", (req, res) => {
   res.status(200).json(data);
 });
