@@ -1,20 +1,21 @@
-// const {Readable , Writable} = require("stream");
+const {Readable , Writable} = require("stream");
 
 
-// const readableStream = new Readable({
-//     highWaterMark:2,
-//     read(){}
-// });
+const readableStream = new Readable({
+     objectMode: true,
+    highWaterMark:2,
+    read(){}
+});
 
 
 
-// readableStream.on("data" , (chunk)=>{
-//     console.log('Data is coming' , chunk.toString())
-//     writableStream.write(chunk)
-// })
+readableStream.on("data" , (chunk)=>{
+    console.log('Data is coming' , JSON.stringify(chunk))
+ 
+})
 
 
-// console.log(readableStream.push("H"))
+console.log(readableStream.push({name:"suraj" , age:21}))
 
 
 // const writableStream = new Writable({
