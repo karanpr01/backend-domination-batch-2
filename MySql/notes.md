@@ -1,5 +1,6 @@
 
 
+
 # **MySQL Notes for `users` Table (With Examples & Quizzes)**
 
 
