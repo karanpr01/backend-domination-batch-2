@@ -1,3 +1,4 @@
+-- Active: 1736351091953@@127.0.0.1@3306@mydb
  -- create database myDb;
 SHOW DATABASES;
 -- DROP DATABASE myDb;
