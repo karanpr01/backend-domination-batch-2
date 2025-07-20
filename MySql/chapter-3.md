@@ -25,7 +25,7 @@ A **Primary Key (PK)** is a special column (or set of columns) used to **uniquel
 
 * Must be **unique** for each row.
 * Cannot be `NULL`.
-* Each table can have **only one Primary Key**, but it can be made up of multiple columns (composite key).
+* Each table can have **only one Primary Key**, but it can be made up of multiple columns (What is a composite key).
 
 ---
 
