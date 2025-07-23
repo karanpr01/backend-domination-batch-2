@@ -187,6 +187,9 @@ VALUES ('Angular', 'Frontend', 2010, 'https://angular.io');
 -- If everything is correct, save changes
 COMMIT;
 
+ 
+
+ROLLBACK
 -- If something went wrong, undo changes instead
 -- ROLLBACK;
 
