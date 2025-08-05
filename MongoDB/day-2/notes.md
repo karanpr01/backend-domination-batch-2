@@ -243,7 +243,7 @@ result.forEach(doc => console.log(doc));
    -->
    ### **Logical Operators in MongoDB**
 
-Logical operators in MongoDB (`$and`, `$or`, `$not`, and `$nor`) are used to combine multiple query expressions. These operators provide flexibility in filtering documents based on complex conditions.
+Logical operators in MongoDB (`$and`, `$or`, `${not}`, and `$nor`) are used to combine multiple query expressions. These operators provide flexibility in filtering documents based on complex conditions.
 
 ---
 
