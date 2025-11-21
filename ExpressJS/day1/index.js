@@ -5,10 +5,13 @@ const app = express();
 // parse JSON bodies
 app.use(express.json());
 
+
 const data = [
   { id: 1, name: "Prem Karn",  email: "prem@gmail.com" },
   { id: 2, name: "Priya Karn", email: "priya@gmail.com" }
 ];
+
+
 
 // API EndPoints
 app.get("/", (req, res) => {
@@ -16,10 +19,14 @@ app.get("/", (req, res) => {
   res.status(200).send("Hello World");
 });
 
+
+
 // Return all users
 app.get("/users", (req, res) => {
   res.status(200).json(data);
 });
+
+
 
 // Route param: get single user by id
 app.get("/user/:id", (req, res) => {
@@ -29,6 +36,8 @@ app.get("/user/:id", (req, res) => {
   res.status(200).json(user);
 });
 
+
+
 // Query param: get user by name ?name=...
 app.get("/user", (req, res) => {
   const { name } = req.query;
@@ -37,6 +46,8 @@ app.get("/user", (req, res) => {
   if (!user) return res.status(404).json({ error: "User not found" });
   res.status(200).json(user);
 });
+
+
 
 // CREATE user (POST /users) - more RESTful
 app.post("/createUser", (req, res) => {
@@ -52,6 +63,8 @@ app.post("/createUser", (req, res) => {
   data.push(newUser);
   res.status(201).json({ success: true, message: "User Created Successfully", user: newUser });
 });
+
+
 
 // UPDATE user (PUT /user/:id)
 app.put("/user/:id", (req, res) => {
@@ -76,6 +89,28 @@ app.delete("/user/:id", (req, res) => {
   const removed = data.splice(idx, 1)[0];
   res.status(200).json({ success: true, message: "User deleted", user: removed });
 });
+
+
+// PATCH -> partial update
+app.patch("/user/:id", (req, res) => {
+    const { id } = req.params;
+    const updates = req.body;   // whatever fields the client sends
+
+    const idx = data.findIndex(u => u.id === Number(id));
+    if (idx === -1) return res.status(404).json({ error: "User not found" });
+
+    // update only the fields provided
+    Object.assign(data[idx], updates);
+
+    res.status(200).json({
+        success: true,
+        message: "User Partially Updated Successfully",
+        user: data[idx]
+    });
+});
+
+
+
 
 app.listen(3000, () => {
   console.log("Server is Running ✅ on port 3000");
