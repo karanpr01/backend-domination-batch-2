@@ -182,4 +182,3 @@ app.listen(PORT, () => {
 | PUT    | Replace whole object | `app.put('/route/:id', handler)`    |
 | PATCH  | Update part of data  | `app.patch('/route/:id', handler)`  |
 | DELETE | Remove a resource    | `app.delete('/route/:id', handler)` |
-
